@@ -31,15 +31,12 @@ localStorage.setItem("Total", "<?php $Total = fopen('scratch/Total','r');echo fg
 <tr><div id='info'></tr>
 </tbody>
 </table>
-		</center>
-	</td>
-	<td></td>
-<tbody ><tr>
-
+		</center></td><td></td><tbody ><tr>
 </tr></tbody></table></center> 
 		<td width="20%"><table style="background-color: #1D1D1D"><td><font size='5.5'><div id="realproF"></div></font> <div id='res12'></div></td></table></td><td></td></tr><tr><td></td>	
 		<td><div class="container"><div class="progressbar"></div></div></td><td><font size="1"> <div id="infoPercentage"></div></span></font></td></tr></tbody></table><hr>
- <center>   <table ><thead>
+ <center>   
+ <table ><thead>
 	  <tr style="background-color: #5A5050">
 		<th><font size="1">คู่เหรียญเทรด</font></th>
 		<th><font size="1">Average</font></th>		
@@ -53,7 +50,32 @@ localStorage.setItem("Total", "<?php $Total = fopen('scratch/Total','r');echo fg
 		 <td><font color="violet"><u><div id='res2' style='user-select: all; cursor: pointer;'></div></u></font></td>
 		 <td><font color="yellow"><u><div id='res' style='user-select: all; cursor: pointer;'></div></u></font></td>
 		 <td><font color="white"><u><div id='resnowday' style='user-select: all; cursor: pointer;'></div></u></font></td>
-		 </tr></tbody></table></center><center>
+		 </tr></tbody></table></center>
+		 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "height": 300,
+  "width": 350,
+  "symbol": "BINANCE:"+ localStorage.getItem("NameCoin") +"BUSD",
+  "interval": "60",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "hide_top_toolbar": true,
+  "hide_legend": true,
+  "save_image": false,
+  "studies": [
+    "MACD@tv-basicstudies"
+  ],
+  "container_id": "tradingview_a54ec"
+}
+  );
+  </script>	
+		 <center>
 .......<br>
 [Bot is runing]
 <br>
@@ -72,7 +94,7 @@ localStorage.setItem("Total", "<?php $Total = fopen('scratch/Total','r');echo fg
 		function button4() {
 			exec("node sellmarket.js", $output); 
 			echo implode("\n", $output);
-			header( "refresh:2;url=index.php");
+			header( "refresh:1;url=index.php");
 		}
 		exec("node check-balance.js", $output); 
 		echo implode("\n", $output);

@@ -77,10 +77,6 @@ localStorage.setItem("executed", "<?php $executed = fopen('scratch/Executed','r'
     function button1() {
     exec("node buy.js", $output); 
     echo implode("\n", $output);
-    echo '<script type="text/javascript">',
-    'if(localStorage.getItem("executed") > 0){',
-    'window.location.href = "bot.php"}',
-     '</script>';
     }
 		exec("node check-balance.js", $output); 
 		echo implode("\n", $output);
@@ -140,6 +136,7 @@ const signal = async () => {
   if (localStorage.getItem("executed") > 0){
   document.getElementById("macdsig").innerHTML = macd.toFixed(6).fontcolor("green")
   document.getElementById("button").innerHTML = "<h2>Bot is running right now!</h2>"
+  window.location.href = "bot.php";
  } else if (macd > 0){
   document.getElementById("macdsig").innerHTML = macd.toFixed(6).fontcolor("green")
  } 
