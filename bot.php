@@ -51,7 +51,7 @@ localStorage.setItem("Total", "<?php $Total = fopen('scratch/Total','r');echo fg
 		 <td><font color="yellow"><u><div id='res' style='user-select: all; cursor: pointer;'></div></u></font></td>
 		 <td><font color="white"><u><div id='resnowday' style='user-select: all; cursor: pointer;'></div></u></font></td>
 		 </tr></tbody></table></center>
-		 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+		 <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
   <script type="text/javascript">
   new TradingView.widget(
   {
@@ -69,12 +69,13 @@ localStorage.setItem("Total", "<?php $Total = fopen('scratch/Total','r');echo fg
   "hide_legend": true,
   "save_image": false,
   "studies": [
-    "MACD@tv-basicstudies"
+    "MACD@tv-basicstudies",
+	"PivotPointsStandard@tv-basicstudies"
   ],
   "container_id": "tradingview_a54ec"
 }
   );
-  </script>	
+  </script>	 -->
 		 <center>
 .......<br>
 [Bot is runing]

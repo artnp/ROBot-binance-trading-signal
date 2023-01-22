@@ -38,7 +38,8 @@ localStorage.setItem("executed", "<?php $executed = fopen('scratch/Executed','r'
   "hide_legend": false,
   "save_image": false,
   "studies": [
-    "MACD@tv-basicstudies"
+    "MACD@tv-basicstudies",
+    "PivotPointsStandard@tv-basicstudies"
   ],
   "container_id": "tradingview_a54ec"
 }
@@ -77,6 +78,7 @@ localStorage.setItem("executed", "<?php $executed = fopen('scratch/Executed','r'
     function button1() {
     exec("node buy.js", $output); 
     echo implode("\n", $output);
+    header("refresh:0;");
     }
 		exec("node check-balance.js", $output); 
 		echo implode("\n", $output);
