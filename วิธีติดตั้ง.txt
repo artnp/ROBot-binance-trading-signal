@@ -1,0 +1,8 @@
+- Appserv
+- Node.js
+npm i node-localstorage
+npm i xmlhttprequest
+npm i axios
+npm i cheerio
+
+- API install @ buy.js
